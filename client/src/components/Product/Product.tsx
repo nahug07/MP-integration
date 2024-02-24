@@ -6,9 +6,9 @@ import { useState } from "react";
 const Product = () => {
   const [preferenceId, setPreferenceId] = useState(null);
 
-  initMercadoPago(import.meta.env.VITE_PUBLIC_KEY, { locale: "en-US" });
+  initMercadoPago(import.meta.env.production.VITE_PUBLIC_KEY, { locale: "en-US" });
 
-  const url = import.meta.env.VITE_API + "/create_preference"
+  const url = import.meta.env.production.VITE_API + "/create_preference"
   console.log(url)
 
   const createPreference = async () => {
