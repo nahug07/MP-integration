@@ -63,7 +63,6 @@ const Product = () => {
             />
           )}
         </div>
-        {JSON.stringify(import.meta.env.VITE_API)}
       </div>
     </div>
   );
