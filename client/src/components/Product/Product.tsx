@@ -8,10 +8,13 @@ const Product = () => {
 
   initMercadoPago(import.meta.env.VITE_PUBLIC_KEY, { locale: "en-US" });
 
+  const url = import.meta.env.VITE_API + "/create_preference"
+  console.log(url)
+
   const createPreference = async () => {
     try {
       const response = await axios.post(
-        import.meta.env.VITE_API + "/create_preference",
+        url,
         {
           title: "Sneakers",
           quantity: 1,
