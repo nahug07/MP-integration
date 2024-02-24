@@ -12,13 +12,13 @@ import { MercadoPagoConfig, Preference } from 'mercadopago';
 const client = new MercadoPagoConfig({ accessToken: process.env.ACCESS_TOKEN });
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("sv running");
+    res.send("sv is running!!");
 })
 
 app.post("/create_preference", async (req, res) => {
