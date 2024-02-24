@@ -33,9 +33,9 @@ app.post("/create_preference", async (req, res) => {
                 }
             ],
             back_urls: {
-                success: "https://github.com/nahug07",
-                failure: "https://github.com/nahug07",
-                pending: "https://github.com/nahug07",
+                success: "https://mp-integration-three.vercel.app/",
+                failure: "https://mp-integration-three.vercel.app/",
+                pending: "https://mp-integration-three.vercel.app/",
             },
             auto_return: "approved",
         };
