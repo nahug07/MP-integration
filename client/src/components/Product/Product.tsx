@@ -11,7 +11,7 @@ const Product = () => {
   const createPreference = async () => {
     try {
       const response = await axios.post(
-        "https://back-mp-integration.vercel.app/create_preference",
+        import.meta.env.VITE_API + "/create_preference",
         {
           title: "Sneakers",
           quantity: 1,
@@ -63,6 +63,7 @@ const Product = () => {
             />
           )}
         </div>
+        {JSON.stringify(import.meta.env.VITE_API)}
       </div>
     </div>
   );
