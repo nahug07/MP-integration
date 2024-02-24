@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     margin: 5vh auto;
   
-    div {
+    .content {
       padding: 30px;
       border: 1px solid #009FE3;
       border-radius: 16px;
@@ -47,13 +47,13 @@
       font-size: 25px;
     }
   
-    p {
+    .price {
       color: #2D3276;
       font-family: Anta;
       font-size: 22px;
     }
-  
-    button {
+
+    .buttonPay{
       border-radius: 8px;
       border: none;
       outline: 0;
@@ -65,8 +65,9 @@
       width: 100%;
       font-size: 15px;
     }
+
     
-    button:hover {
+    .buttonPay:hover {
       background-color: #19bb75;
     }
   }
