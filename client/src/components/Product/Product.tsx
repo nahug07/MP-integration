@@ -11,7 +11,7 @@ const Product = () => {
 
     const createPreference = async () => {
         try {
-            const response = await axios.post("http://localhost:3000/create_preference",{
+            const response = await axios.post(import.meta.env.VITE_API + '/create_preference',{
                 title: "Sneakers",
                 quantity: 1,
                 price: 2000,
@@ -43,7 +43,7 @@ const Product = () => {
                     <h3>Sneakers</h3>
                     <p className={classes.price}>$ 2000</p>
                     <button className={classes.buttonPay} onClick={handleBuy}>Buy</button>
-                    {preferenceId && <Wallet initialization={{ preferenceId: preferenceId, redirectMode: 'blank' }} customization={{ texts:{ valueProp: 'smart_option'}}} />}
+                    {preferenceId && <Wallet initialization={{ preferenceId: preferenceId, redirectMode: 'modal' }} customization={{ texts:{ valueProp: 'smart_option'}}} />}
                 </div>
             </div>
         </div>
