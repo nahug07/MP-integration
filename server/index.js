@@ -18,7 +18,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("sv is running!!");
+    res.send("sv is running!");
+})
+
+app.get("/test", (req, res) => {
+    res.send("test!");
 })
 
 app.post("/create_preference", async (req, res) => {
